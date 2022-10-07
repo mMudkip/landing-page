@@ -1,5 +1,76 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
 
+
+:root {
+  --white: #ffffff;
+
+  --gray300: #c6c6c6;
+  --gray400: #959595;
+  --gray500: #636363;
+  --gray600: #323232;
+  --gray700: #000000;
+
+  --blue100: #d9e7fd;
+  --blue200: #b3cefb;
+  --blue300: #8eb6f8;
+  --blue400: #689df6;
+  --blue500: #4285f4;
+  --blue600: #356ac3;
+  --blue700: #285092;
+  --blue800: #1a3562;
+  --blue900: #0d1b31;
+
+  --red100: #fbd9d7;
+  --red200: #f7b4ae;
+  --red300: #f28e86;
+  --red400: #ee695d;
+  --red500: #ea4335;
+  --red600: #bb362a;
+  --red700: #8c2820;
+  --red800: #5e1b15;
+  --red900: #2f0d0b;
+
+  --yellow100: #fef2cd;
+  --yellow200: #fde49b;
+  --yellow300: #fdd768;
+  --yellow400: #fcc936;
+  --yellow500: #fbbc04;
+  --yellow600: #c99603;
+  --yellow700: #977102;
+  --yellow800: #644b02;
+  --yellow900: #322601;
+
+  --green100: #d6eedd;
+  --green200: #aedcba;
+  --green300: #85cb98;
+  --green400: #5db975;
+  --green500: #34a853;
+  --green600: #2a8642;
+  --green700: #1f6532;
+  --green800: #154321;
+  --green900: #0a2211;
+
+  --orange100: #ffe2cc;
+  --orange200: #ffc599;
+  --orange300: #ffa767;
+  --orange400: #ff8a34;
+  --orange500: #ff6d01;
+  --orange600: #cc5701;
+  --orange700: #994101;
+  --orange800: #662c00;
+  --orange900: #331600;
+
+  --cyan100: #daf2f4;
+  --cyan200: #b5e5e8;
+  --cyan300: #90d7dd;
+  --cyan400: #6bcad1;
+  --cyan500: #46bdc6;
+  --cyan600: #38979e;
+  --cyan700: #2a7177;
+  --cyan800: #1c4c4f;
+  --cyan900: #0e2628;
+}
+
 * {  
   font-family: 'Lexend', sans-serif;
   margin: 0;
@@ -8,7 +79,7 @@
 }
 
 body {
-  background-color: rgb(32, 32, 48);
+  background-color: var(--white);
 }
 
 h1 {
@@ -16,10 +87,10 @@ h1 {
   text-align: center;
   vertical-align: middle;
   margin: 20px 0;
-  color: white;
+  color: var(--gray700);
 }
 
-div.paragraphe {
+/* div.paragraphe {
   background-color: rgb(192, 192, 192);
   border-radius: 8px;
   padding: 11px 26px;
@@ -42,17 +113,18 @@ div.paragraphe p::selection {
   padding: 1px;
   border-radius: 2px;
   color: rgb(48, 48, 48);
-}
+} */
 
 section.flexbox {
-  height: 240px;
-  width: 960px;
+  height: 330px;
+  width: 1020px;
   margin: 0 auto;
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(48, 48, 64);
+  flex-wrap: wrap;
+  background-color: var(--gray300);
 }
 
 section.flexbox > div {
@@ -60,28 +132,36 @@ section.flexbox > div {
   height: 200px;
   margin: 20px;
   border-radius: 8px;
-
 }
 
+
 section.flexbox > div:hover {
-  filter: brightness(80%);
-  border-width: 2px;
-  transition: 0.05s;
+  /* filter: brightness(90%); */
+  transition: 0.1s;
 }
 
 div.blue {
-  background-color: rgb(40, 96, 160);
-  border: 1px solid rgb(88, 144, 208);
+  background-color: var(--blue500);
+}
+
+div.blue:hover {
+  background-color: var(--blue600);
 }
 
 div.green {
-  background-color: rgb(96, 160, 40);
-  border: 1px solid rgb(144, 208, 88);
+  background-color: var(--green500);
+}
+
+div.green:hover {
+  background-color: var(--green600);
 }
 
 div.red {
-  background-color: rgb(160, 40, 96);
-  border: 1px solid rgb(208, 88, 144);
+  background-color: var(--red500);
+}
+
+div.red:hover {
+  background-color: var(--red600);
 }
 
 @media screen and (max-width: 900px) {
@@ -91,19 +171,27 @@ div.red {
   }
 }
 
-/* h1 {
-  color: red;
-  animation-name: example;
-  animation-duration: 4s;
+section.flexbox > div.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+  margin-top: 0px;
 }
 
-@keyframes example {
-  0%    { color: red;    }
-  14%   { color: orange; }
-  29%   { color: yellow; }
-  43%   { color: green;  }
-  57%   { color: cyan;   }
-  71%   { color: blue;   }
-  86%   { color: purple; }
-  100%  { color: red; }
-} */
+section.flexbox > div.button > button {
+  width: 80%;
+  height: 50px;
+  border-radius: 8px;
+  background-color: var(--gray700);
+  border: none;
+  color: var(--white);
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+section.flexbox > div.button > button:active {
+  background-color: var(--gray600);
+}
