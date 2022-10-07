@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
+
+* {  
+  font-family: 'Lexend', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(32, 32, 48);
+}
+
+h1 {
+  font-size: 2em;
+  text-align: center;
+  vertical-align: middle;
+  margin: 20px 0;
+  color: white;
+}
+
+div.paragraphe {
+  background-color: rgb(192, 192, 192);
+  border-radius: 8px;
+  padding: 11px 26px;
+  margin: 40px;
+  border: 1px solid rgb(128, 128, 128);
+  text-align: justify;
+  line-height: 1.5;
+  word-spacing: 2px;
+  transition: 0.05s;
+}
+
+div.paragraphe:hover {
+  background-color: rgb(200, 200, 200);
+  border: 2px solid rgb(136, 136, 136);
+  padding: 10px 25px;
+}
+
+div.paragraphe p::selection {
+  background-color: white;
+  padding: 1px;
+  border-radius: 2px;
+  color: rgb(48, 48, 48);
+}
+
+section.flexbox {
+  height: 240px;
+  width: 960px;
+  margin: 0 auto;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(48, 48, 64);
+}
+
+section.flexbox > div {
+  width: 300px;
+  height: 200px;
+  margin: 20px;
+  border-radius: 8px;
+
+}
+
+section.flexbox > div:hover {
+  filter: brightness(80%);
+  border-width: 2px;
+  transition: 0.05s;
+}
+
+div.blue {
+  background-color: rgb(40, 96, 160);
+  border: 1px solid rgb(88, 144, 208);
+}
+
+div.green {
+  background-color: rgb(96, 160, 40);
+  border: 1px solid rgb(144, 208, 88);
+}
+
+div.red {
+  background-color: rgb(160, 40, 96);
+  border: 1px solid rgb(208, 88, 144);
+}
+
+@media screen and (max-width: 900px) {
+  section.flexbox > div {
+    width: 150px;
+    height: 100px;
+  }
+}
+
+/* h1 {
+  color: red;
+  animation-name: example;
+  animation-duration: 4s;
+}
+
+@keyframes example {
+  0%    { color: red;    }
+  14%   { color: orange; }
+  29%   { color: yellow; }
+  43%   { color: green;  }
+  57%   { color: cyan;   }
+  71%   { color: blue;   }
+  86%   { color: purple; }
+  100%  { color: red; }
+} */
