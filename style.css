@@ -1,6 +1,3 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap'); */
-
-
 :root {
   --gray100: #e6e6e6;
   --gray200: #cccccc;
@@ -239,19 +236,6 @@ section.utilities-list {
   flex-wrap: wrap;
   justify-content: space-around;
 }
-
-/* section.utilities-list > div {
-  width: 1220px;
-  flex-wrap: wrap;
-} */
-
-/* section.utilities-list > div.utilities-row-1 {
-  justify-content: space-between;
-}
-
-section.utilities-list > div.utilities-row-2 {
-  justify-content: space-around;
-} */
 
 div.usefulness {
   width: 350px;
