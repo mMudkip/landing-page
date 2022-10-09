@@ -83,6 +83,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: 0.2s;
 }
 
 body {
@@ -91,11 +92,18 @@ body {
 
 h1 {
   font-size: 60px;
+  width: 600px;
   text-align: center;
 }
 
 span.subtext {
-  color: var(--gray800);
+  color: var(--gray700);
+}
+
+h2 {
+  font-size: 48px;
+  width: 650px;
+  text-align: center;
 }
 
 header {
@@ -107,6 +115,10 @@ header {
 hr {
   width: 90%;
   border: 1px solid var(--gray200);
+}
+
+p {
+  font-size: 20px;
 }
 
 a {
@@ -126,7 +138,6 @@ a.current {
 
 a.others {
   color: var(--gray600);
-  transition: 0.2s;
   border-radius: 4px;
   border: 0 solid transparent;
 }
@@ -144,6 +155,7 @@ a.others:active {
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .flexbox.flex-row {
@@ -164,10 +176,6 @@ section.main-content {
   margin-top: 60px;
 }
 
-section.title {
-  width: 600px;
-}
-
 img.google-home-logo {
   margin-bottom: 40px;
 }
@@ -180,95 +188,142 @@ section.description {
 div.connected-house {
   width: 450px;
   height: 450px;
-  justify-content: center;
 }
 
 div.connected-house-description {
   width: 400px;
 }
 
-div.connected-house-description > p {
+div.connected-house-description > p, div.compatibility-description > p {
   font-size: 24px;
   line-height: 35px;
 }
 
-/* section.flexbox {
-  height: 330px;
-  width: 1020px;
-  margin: 0 auto;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  background-color: var(--gray300);
+section.utilities {
+  margin-top: 50px;
 }
 
-section.flexbox > div {
-  width: 300px;
-  height: 200px;
-  margin: 20px;
-  border-radius: 8px;
+img.google-home-compatibility {
+  margin-bottom: 30px;
 }
 
-
-section.flexbox > div:hover {
-  filter: brightness(90%);
-  transition: 0.1s;
+div.compatibility-description {
+  width: 900px;
+  margin: 40px 0;
 }
 
-div.blue {
+div.compatibility-description > p {
+  text-align: center;
+}
+
+a.button {
+  color: white;
   background-color: var(--blue500);
+  border-radius: 4px;
+  padding: 13px 26px;
+  font-size: 18px;
 }
 
-div.blue:hover {
+a.button:hover {
   background-color: var(--blue600);
 }
 
-div.green {
-  background-color: var(--green500);
+section.utilities-list {
+  width: 1220px;
+  height: 450px;
+  margin-top: 50px;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-div.green:hover {
-  background-color: var(--green600);
+section.utilities-list > div {
+  width: 1220px;
+  flex-wrap: wrap;
 }
 
-div.red {
-  background-color: var(--red500);
+section.utilities-list > div.utilities-row-1 {
+  justify-content: space-between;
 }
 
-div.red:hover {
-  background-color: var(--red600);
+section.utilities-list > div.utilities-row-2 {
+  justify-content: space-around;
 }
 
-@media screen and (max-width: 900px) {
-  section.flexbox > div {
-    width: 150px;
-    height: 100px;
-  }
-}
-
-section.flexbox > div.button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 50px;
-  margin-top: 0px;
-}
-
-section.flexbox > div.button > button {
-  width: 80%;
-  height: 50px;
+div.usefulness {
+  width: 350px;
+  height: 200px;
   border-radius: 8px;
-  background-color: black;
-  border: none;
-  color: var(--white);
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.1s;
+  justify-content: space-around;
+  background-color: white;
+  filter: drop-shadow(0 0 2px var(--gray300));
 }
 
-section.flexbox > div.button > button:active {
-  background-color: var(--gray600);
-} */
+div.usefulness:hover {
+  background-color: var(--gray100);
+  filter: drop-shadow(0 0 0 var(--gray300));
+}
+
+div.usefulness:active {
+  background-color: var(--gray200);
+}
+
+div.usefulness > img {
+  padding: 8px;
+  background-color: white;
+  border-radius: 16px;
+  border: none;
+  margin-top: 40px;
+}
+
+div.usefulness > p {
+  margin-bottom: 20px;
+}
+
+section.start-now {
+  width: 100%;
+  height: 650px;
+  background: var(--gray100);
+  margin-top: 120px;
+  align-items: center;
+}
+
+section.start-now > div {
+  margin-top: 50px;
+  width: 1350px;
+}
+
+div.home-start {
+  width: 650px;
+  align-items: flex-start;
+}
+
+img.google-home-logo-start {
+  margin-bottom: 30px;
+}
+
+div.home-start > * {  
+  text-align: left;
+}
+
+p.start-description {
+  margin: 10px 0 60px 0;
+}
+
+footer {
+  height: 150px;
+}
+
+div.footer {
+  height: 100%;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+div.footer > p.footer-infos {
+  margin: 0 10px;
+}
+
+p.footer-google {
+  margin: 0 30px 0 50px;
+  font-size: 30px;
+}
