@@ -151,6 +151,10 @@ a.others:active {
   background-color: var(--gray200);
 }
 
+.flexbox.main {
+  width: 100%;
+}
+
 .flexbox {
   width: 100%;
   display: flex;
@@ -181,8 +185,8 @@ img.google-home-logo {
 }
 
 section.description {
-  width: 1000px;
-  justify-content: space-between;
+  width: 100%;
+  justify-content: space-around;
 }
 
 div.connected-house {
@@ -233,21 +237,21 @@ section.utilities-list {
   height: 450px;
   margin-top: 50px;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
-section.utilities-list > div {
+/* section.utilities-list > div {
   width: 1220px;
   flex-wrap: wrap;
-}
+} */
 
-section.utilities-list > div.utilities-row-1 {
+/* section.utilities-list > div.utilities-row-1 {
   justify-content: space-between;
 }
 
 section.utilities-list > div.utilities-row-2 {
   justify-content: space-around;
-}
+} */
 
 div.usefulness {
   width: 350px;
@@ -255,12 +259,12 @@ div.usefulness {
   border-radius: 8px;
   justify-content: space-around;
   background-color: white;
-  filter: drop-shadow(0 0 2px var(--gray300));
+  filter: drop-shadow(0 0 2px var(--gray200));
 }
 
 div.usefulness:hover {
   background-color: var(--gray100);
-  filter: drop-shadow(0 0 0 var(--gray300));
+  filter: drop-shadow(0 0 0 var(--gray200));
 }
 
 div.usefulness:active {
@@ -326,4 +330,127 @@ div.footer > p.footer-infos {
 p.footer-google {
   margin: 0 30px 0 50px;
   font-size: 30px;
+}
+
+@media screen and (max-width: 1250px) {
+
+  h1 {
+    font-size: 48px;
+    width: 480px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 40px;
+    width: 550px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  div.connected-house-description > p, div.compatibility-description > p {
+    font-size: 20px;
+    line-height: 29px;
+  }
+
+  section.description {
+    width: 750px;
+    margin: -50px 0;
+  }
+
+  section.description > div > img {
+    width: 300px;
+  }
+
+  div.compatibility-description {
+    width: 750px;
+  }
+
+  section.utilities-list {
+    width: 750px;
+    height: 100%;
+  }
+
+  section.utilities-list > a {
+    margin: 10px 0;
+  }
+
+  section.start-now > div > img {
+    display: none;
+  }
+
+  p.footer-google {
+    margin: 0 20px 0 35px;
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+
+  h1 {
+    font-size: 40px;
+    width: 350px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 40px;
+    width: 350px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 12px;
+  }
+
+  .flexbox.header-links {
+    width: 350px;
+    justify-content: space-between;
+    margin: 20px 0 40px 0;
+  }
+
+  div.connected-house {
+    width: 350px;
+    height: 350px;
+  }
+
+  div.connected-house-description {
+    width: 350px;
+    margin-bottom: 50px;
+  }
+
+  section.description.flex-row {
+    width: 350px;
+    flex-direction: column;
+  }
+
+  div.compatibility-description {
+    width: 350px;
+  }
+
+  section.utilities-list {
+    width: 350px;
+    height: 100%;
+  }
+
+  section.start-now {
+    width: 100%;
+    height: 550px;
+    background: var(--gray100);
+    margin-top: 120px;
+    align-items: center;
+  }
+
+  div.home-start {
+    width: 350px;
+    align-items: flex-start;
+  }
+
+  p.footer-google {
+    margin: 0 10px 0 20px;
+    font-size: 16px;
+  }
+
 }
